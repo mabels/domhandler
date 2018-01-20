@@ -10,6 +10,12 @@ export enum ElementType {
   Doctype = 'doctype'
 }
 
+export function isTag(type: string): boolean {
+  return type === ElementType.Tag ||
+         type === ElementType.Script ||
+         type === ElementType.Style;
+}
+
 const ReWhitespace = /\s+/g;
 
 export function appendString(prefix: string, suffix: string, normalize: boolean): string {

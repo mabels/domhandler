@@ -54,19 +54,4 @@ export class TagLv1 extends DomApiLv1 {
     tmp[key] = tmp[key] || attr;
   }
 
-  // public nodeType(): string {
-  //   // return NodeTypes[this.type] || NodeTypes.element;
-  // }
 }
-
-// Object.keys(domLvl1).forEach(function (key) {
-//   var shorthand = domLvl1[key];
-//   Object.defineProperty(NodePrototype, key, {
-//     get: function () {
-//       return this[shorthand] || null;
-//     },
-//     set: function (val) {
-//       this[shorthand] = val;
-//       return val;
-//     }
-//   });

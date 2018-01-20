@@ -1,10 +1,9 @@
-import { Tag } from './tag';
-import { Text } from './text';
-import { DomApi, isTag } from './dom-api';
-import { TagLv1 } from './tag-lv1';
-import { TextLv1 } from './text-lv1';
-import { DomApiLv1 } from './dom-api-lv1';
-import { DomApiAbstract, ElementType, appendString } from './dom-api-abstract';
+import { DomApiAbstract, ElementType, appendString, isTag } from './dom-api-abstract';
+import { DomApi, Tag, Text } from './dom-api';
+import { DomApiLv1, TagLv1, TextLv1 } from './dom-api-lv1';
+
+export { DomApi, Tag, Text } from './dom-api';
+export { DomApiLv1, TagLv1, TextLv1 } from './dom-api-lv1';
 
 export declare type DomType = DomApi | DomApiLv1;
 
@@ -51,7 +50,7 @@ export class DomHandler {
       this._callback = callback;
     } else {
       this._callback = callback;
-      this._options = options;
+      this._options = options || defaultOpts;
       this._elementCB = elementCB;
     }
     this.doms = [];

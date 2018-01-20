@@ -1,11 +1,5 @@
 import { DomApiAbstract, ElementType, appendString } from './dom-api-abstract';
 
-export function isTag(type: string): boolean {
-  return type === ElementType.Tag ||
-         type === ElementType.Script ||
-         type === ElementType.Style;
-}
-
 export abstract class DomApi implements DomApiAbstract {
   public readonly type: ElementType;
   public name?: string;
@@ -57,3 +51,6 @@ export abstract class DomApi implements DomApiAbstract {
     /* */
   }
 }
+
+export { Tag } from './tag';
+export { Text } from './text';

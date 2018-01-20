@@ -11,7 +11,7 @@ if (process.argv.includes("typed")) {
   Handler = require("../dist/dom-handler").DomHandler;
 } else {
   impl = "plain";
-  Handler = require("../");
+  Handler = require("../index.js");
 }
 
 

@@ -1,8 +1,8 @@
 {
   "name": "domhandler",
-  "version": "2.5.0",
+  "version": "2.5.2",
   "description": "handler for htmlparser2 that turns pages into a dom",
-  "main": "index.js",
+  "main": "./dist/dom-handler.js",
   "types": "./dist/dom-handler.d.ts",
   "directories": {
     "test": "tests"

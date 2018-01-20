@@ -3,22 +3,6 @@
 
 import { ElementType } from './dom-api-abstract';
 import { DomApi } from './dom-api';
-// import { Tag } from './tr';
-
-// export enum domLvl1 {
-//   tagName = 'name',
-//   childNodes = 'children',
-//   parentNode = 'parent',
-//   previousSibling = 'prev',
-//   nextSibling = 'next',
-//   nodeValue = 'data'
-// }
-
-// export enum ElementType {
-//   Script,
-//   Style,
-//   Tag
-// }
 
 export interface NodeParam {
   type: ElementType;
@@ -56,19 +40,4 @@ export class Tag extends DomApi {
     return this.children;
   }
 
-  // public nodeType(): string {
-  //   // return NodeTypes[this.type] || NodeTypes.element;
-  // }
 }
-
-// Object.keys(domLvl1).forEach(function (key) {
-//   var shorthand = domLvl1[key];
-//   Object.defineProperty(NodePrototype, key, {
-//     get: function () {
-//       return this[shorthand] || null;
-//     },
-//     set: function (val) {
-//       this[shorthand] = val;
-//       return val;
-//     }
-//   });

@@ -11,7 +11,7 @@ export function nodeTypeValue(key: string): number {
   return (NodeTypes as any)[key] || NodeTypes.element;
 }
 
-export class DomApiLv1 implements DomApiAbstract {
+export abstract class DomApiLv1 implements DomApiAbstract {
   public type: ElementType;
   public tagName?: string;
   public nodeValue?: string;
@@ -89,3 +89,6 @@ export class DomApiLv1 implements DomApiAbstract {
   }
 
 }
+
+export { TagLv1 } from './tag-lv1';
+export { TextLv1 } from './text-lv1';
